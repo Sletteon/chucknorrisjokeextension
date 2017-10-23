@@ -1,4 +1,5 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-    alert("Boi Oh Boi");
+    var vicc = 'striiiing';
+    alert(vicc);
     chrome.tabs.executeScript(tab.id, {file: "content_script.js"})
 });
