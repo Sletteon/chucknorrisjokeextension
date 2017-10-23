@@ -5,7 +5,6 @@ function httpGet(theUrl)
 		    xmlHttp.send( null );
 		        return xmlHttp.responseText;
 }
-
 chrome.browserAction.onClicked.addListener(function(tab) {
 	var joke = httpGet('https://api.chucknorris.io/jokes/random');
 	var parsedjoke = JSON.parse(joke)
