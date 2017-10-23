@@ -11,10 +11,7 @@
   },
   "permissions":
   [
-    "tabs",
-    "notifications",
-    "http://*/",
-    "https://*/"
+    "<all_urls>"
   ],
   "manifest_version": 2
 } 
