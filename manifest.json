@@ -1,6 +1,6 @@
 ﻿{
   "name": "Chuck Norris Joke",
-  "description": "This extension will tell you a Chuck Norris Joke is press the button in the top right corner. Creators: Sletteon, kéksóskajóska",
+  "description": "This extension will tell you a Chuck Norris Joke is press the button in the top right corner. Creators: sletteon, kéksóskajóska",
   "version": "1.6",
   "background": {
     "scripts": ["background.js"],

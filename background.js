@@ -1,3 +1,4 @@
+// szedje le a netről a viccet
 function httpGet(theUrl)
 {
 	    var xmlHttp = new XMLHttpRequest();
@@ -5,11 +6,15 @@ function httpGet(theUrl)
 		    xmlHttp.send( null );
 		        return xmlHttp.responseText;
 }
+// szedje ki az api által küldött mapból a value-t (viccet)
+function parse_and_getvalue(raw_joke) {
+	// írja ki logba a nyers viccet, debugging célok
+	console.log(raw_joke)
+	return JSON.parse(raw_joke).value;
+
+}
+// amikor a felhasználó a gombra kattint, kérjen le a weboldalról egy random viccet
 chrome.browserAction.onClicked.addListener(function(tab) {
-	var joke = httpGet('https://api.chucknorris.io/jokes/random');
-	var parsedjoke = JSON.parse(joke)
-	var tenylegjoke = parsedjoke.value;
-    alert(tenylegjoke);                                     // joke :D
-    console.log(parsedjoke)
-    chrome.tabs.executeScript(tab.id, {file: "content_script.js"})
+	joke = parse_and_getvalue(httpGet('https://api.chucknorris.io/jokes/random'));
+	alert(joke);
 });
