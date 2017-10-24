@@ -19,24 +19,3 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 	alert(joke);
 	chrome.tabs.executeScript(tab.id, {file: "content_script.js"});
 });
-a
-a
-a
-abstract
-abstracta
-
-a
-abstractaa
-a
-
-awaita
-a
-
-abstracta
-a
-a
-abstracta
-
-abstractaa
-
-a
