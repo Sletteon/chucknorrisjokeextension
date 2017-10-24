@@ -16,6 +16,9 @@ function parse_and_getvalue(raw_joke) {
 // amikor a felhasználó a gombra kattint, kérjen le a weboldalról egy random viccet
 chrome.browserAction.onClicked.addListener(function(tab) {
 	joke = parse_and_getvalue(httpGet('https://api.chucknorris.io/jokes/random'));
-	alert(joke);
-	chrome.tabs.executeScript(tab.id, {file: "content_script.js"});
+	if (confirm("Do you want a joke?") == true) {
+		alert(joke);
+	} else {
+		alert("You fool...")
+	}
 });
