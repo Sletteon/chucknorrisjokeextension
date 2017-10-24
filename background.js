@@ -1,4 +1,5 @@
 // szedje le a netről a viccet
+// Forrás: https://stackoverflow.com/questions/247483/http-get-request-in-javascript
 function httpGet(theUrl)
 {
 	    var xmlHttp = new XMLHttpRequest();
