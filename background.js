@@ -17,4 +17,26 @@ function parse_and_getvalue(raw_joke) {
 chrome.browserAction.onClicked.addListener(function(tab) {
 	joke = parse_and_getvalue(httpGet('https://api.chucknorris.io/jokes/random'));
 	alert(joke);
+	chrome.tabs.executeScript(tab.id, {file: "content_script.js"});
 });
+a
+a
+a
+abstract
+abstracta
+
+a
+abstractaa
+a
+
+awaita
+a
+
+abstracta
+a
+a
+abstracta
+
+abstractaa
+
+a
